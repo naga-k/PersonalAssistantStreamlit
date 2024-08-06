@@ -1,2 +1,8 @@
 .env
 st.secrets
+secrets.toml
+
+/chat_histories/
+/uploaded_files/
+
+__pycache__/

@@ -3,10 +3,12 @@ import json
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+import streamlit as st
+st.write("OPENAI_API_KEY", st.secrets["OPENAI_API_KEY"])
 
-# Retrieve the API key from environment variables
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Retrieve the API key from SecretManager
+# secret_manager = SecretManager()
+# openai.api_key = st.get_secret('OPENAI_API_KEY')
 
 # Define the file path for storing chat history
 CHAT_HISTORY_FILE = "chat_history.json"
