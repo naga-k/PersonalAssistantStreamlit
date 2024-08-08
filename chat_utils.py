@@ -31,7 +31,7 @@ def save_chat_history(session_id, chat_history, chat_history_dir):
 def get_assistant_response(user_input):
     client = openai.OpenAI()
     stream = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[{"role": "user", "content": user_input}],
         stream=True,
     )
